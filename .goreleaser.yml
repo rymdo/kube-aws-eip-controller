@@ -33,7 +33,7 @@ changelog:
       - '^test:'
 dockers:
   - image_templates:
-    - "rymdo/{{.ProjectName}}:{{ .Tag }}"
-    - "rymdo/{{.ProjectName}}:{{ .ShortCommit }}"
-    - "rymdo/{{.ProjectName}}:latest"
+    - "ghcr.io/rymdo/{{.ProjectName}}:{{ .Tag }}"
+    - "ghcr.io/rymdo/{{.ProjectName}}:{{ .ShortCommit }}"
+    - "ghcr.io/rymdo/{{.ProjectName}}:latest"
     use: buildx
