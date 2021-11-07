@@ -34,9 +34,13 @@ changelog:
 dockers:
   - image_templates:
     - "ghcr.io/rymdo/{{.ProjectName}}:{{ .Tag }}"
-    - "ghcr.io/rymdo/{{.ProjectName}}:{{ .ShortCommit }}"
-    - "ghcr.io/rymdo/{{.ProjectName}}:latest"
     use: buildx
+    goarch: amd64
     build_flag_templates:
-      - "--push"
-      - "--platform=linux/amd64,linux/arm64"
+      - "--platform=linux/amd64"
+  - image_templates:
+    - "ghcr.io/rymdo/{{.ProjectName}}:{{ .Tag }}"
+    use: buildx
+    goarch: arm64
+    build_flag_templates:
+      - "--platform=linux/arm64"
