@@ -36,3 +36,5 @@ jobs:
           args: release --rm-dist --snapshot
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONTAINER_NAME: ghcr.io/${{ github.repository }}
+          

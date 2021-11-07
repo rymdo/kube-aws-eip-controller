@@ -42,3 +42,4 @@ jobs:
           args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONTAINER_NAME: ghcr.io/${{ github.repository }}
