@@ -38,4 +38,5 @@ dockers:
     - "ghcr.io/rymdo/{{.ProjectName}}:latest"
     use: buildx
     build_flag_templates:
+      - "--push"
       - "--platform=linux/amd64,linux/arm64"
